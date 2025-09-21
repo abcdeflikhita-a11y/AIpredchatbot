@@ -110,8 +110,6 @@ const ChatInterface: React.FC = () => {
     // Start conversation
     setTimeout(() => {
       addMessage(chatFlow[0].text, true);
-      setTimeout(() => {
-        addMessage(chatFlow[1].text, true);
         setCurrentStep(1);
       }, 3000);
     }, 1000);
