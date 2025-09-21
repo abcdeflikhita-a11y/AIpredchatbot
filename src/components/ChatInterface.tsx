@@ -112,7 +112,6 @@ const ChatInterface: React.FC = () => {
       addMessage(chatFlow[0].text, true);
         setCurrentStep(1);
       }, 3000);
-    }, 1000);
   }, []);
 
   return (
