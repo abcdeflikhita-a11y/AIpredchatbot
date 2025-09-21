@@ -107,11 +107,16 @@ const ChatInterface: React.FC = () => {
   };
 
   useEffect(() => {
-    // Start conversation
-    setTimeout(() => {
+    // Start conversation with welcome message
+    if (messages.length === 0) {
       addMessage(chatFlow[0].text, true);
+      
+      // Add first question after delay
+      setTimeout(() => {
+        addMessage(chatFlow[1].text, true);
         setCurrentStep(1);
       }, 3000);
+    }
   }, []);
 
   return (
